@@ -68,4 +68,18 @@ public class Pet extends NameEntity {
     public boolean removeVisit(Visit visit) {
         return visits.remove(visit);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder allVisits = new StringBuilder("");
+        if (!getVisits().isEmpty()) {
+            allVisits.append(", Visits:");
+            visits.forEach(visit -> allVisits.append("\n\t").append(visit.toString()));
+        }
+        return super.toString() +
+                ", Birth Date=" + birthDate +
+                ", Owner: (" + owner + ")" +
+                ", Type: (" + petType + ")" +
+                allVisits;
+    }
 }

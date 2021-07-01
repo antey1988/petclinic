@@ -39,4 +39,12 @@ public class Address extends BaseEntity {
     public void setHouse(int house) {
         this.house = house;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", " +
+                "City=" + city +
+                ", Street=" + street +
+                ", House=" + house;
+    }
 }

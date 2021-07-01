@@ -23,9 +23,10 @@ CREATE TABLE addresses (
 CREATE TABLE vets (
   id         INTEGER IDENTITY PRIMARY KEY,
   first_name VARCHAR(100),
-  last_name  VARCHAR(100)
+  second_name  VARCHAR(100)
 );
-CREATE INDEX vets_last_name ON vets (last_name);
+CREATE INDEX vets_first_name ON vets (first_name);
+CREATE INDEX vets_second_name ON vets (second_name);
 
 CREATE TABLE vets_specialties (
   vet_id       INTEGER NOT NULL,

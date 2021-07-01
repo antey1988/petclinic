@@ -16,4 +16,9 @@ public abstract class BaseEntity {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Id=" + id;
+    }
 }

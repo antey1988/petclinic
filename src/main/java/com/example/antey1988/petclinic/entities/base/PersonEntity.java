@@ -29,4 +29,10 @@ public class PersonEntity extends BaseEntity{
         this.secondName = secondName;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + ", " +
+                "First Name=" + firstName +
+                ", Second Name=" + secondName;
+    }
 }
