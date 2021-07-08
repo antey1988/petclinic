@@ -22,15 +22,15 @@ INSERT INTO vets_specialties (vet_id, specialty_id) VALUES (6, 3);
 INSERT INTO addresses VALUES (1, 'Rostov-on-Don', 'str. Eremenko', 4);
 INSERT INTO addresses VALUES (2, 'Rostov-on-Don', 'str. Zorge', 40);
 INSERT INTO addresses VALUES (3, 'Rostov-on-Don', 'avi. Marshala Zhukova', 95);
-INSERT INTO addresses VALUES (4, 'Rostov-on-Don', 'str. Zorge', 15);
-INSERT INTO addresses VALUES (5, 'Rostov-on-Don', 'avi. Marshala Zhukova', 3);
-INSERT INTO addresses VALUES (6, 'Rostov-on-Don', 'str. Eremenko', 27);
+INSERT INTO addresses VALUES (4, 'Moscow', 'str. Zorge', 15);
+INSERT INTO addresses VALUES (5, 'Krasnodar', 'avi. Marshala Zhukova', 3);
+INSERT INTO addresses VALUES (6, 'Sochi', 'str. Eremenko', 27);
 
 INSERT INTO owners VALUES (1, 'Ivan', 'Ivanov', '89281234567');
-INSERT INTO owners VALUES (2, 'Ivan', 'Petrob', '89281234568');
+INSERT INTO owners VALUES (2, 'Ivan', 'Petrov', '89281234568');
 INSERT INTO owners VALUES (3, 'Ivan', 'Sidorov', '89281234569');
 INSERT INTO owners VALUES (4, 'Sergey', 'Kot', '89281234487');
-INSERT INTO owners VALUES (5, 'Anton', 'Nikitenko', '89081234567');
+INSERT INTO owners VALUES (5, 'Anton', 'Petrov', '89081234567');
 INSERT INTO owners VALUES (6, 'Egor', 'Bondarev', '89274321567');
 INSERT INTO owners VALUES (7, 'Elena', 'Petuhova', '89281234997');
 INSERT INTO owners VALUES (8, 'Anna', 'Kozlova', '89281287267');
@@ -67,8 +67,8 @@ INSERT INTO pets VALUES (10, 'Mulligan', '2007-02-24', 2, 8);
 INSERT INTO pets VALUES (11, 'Freddy', '2010-03-09', 5, 9);
 INSERT INTO pets VALUES (12, 'Lucky', '2010-06-24', 2, 9);
 INSERT INTO pets VALUES (13, 'Sly', '2012-06-08', 1, 8);
---
---INSERT INTO visits VALUES (1, 7, '2013-01-01', 'rabies shot');
---INSERT INTO visits VALUES (2, 8, '2013-01-02', 'rabies shot');
---INSERT INTO visits VALUES (3, 8, '2013-01-03', 'neutered');
---INSERT INTO visits VALUES (4, 7, '2013-01-04', 'spayed');
+
+INSERT INTO visits VALUES (1, 7, '2013-01-01', 'rabies shot');
+INSERT INTO visits VALUES (2, 8, '2013-01-02', 'rabies shot');
+INSERT INTO visits VALUES (3, 8, '2013-01-03', 'neutered');
+INSERT INTO visits VALUES (4, 7, '2013-01-04', 'spayed');

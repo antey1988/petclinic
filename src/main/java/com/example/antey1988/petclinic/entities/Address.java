@@ -40,11 +40,11 @@ public class Address extends BaseEntity {
         this.house = house;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return super.toString() + ", " +
                 "City=" + city +
                 ", Street=" + street +
                 ", House=" + house;
-    }
+    }*/
 }

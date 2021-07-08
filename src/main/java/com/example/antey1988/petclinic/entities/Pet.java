@@ -1,6 +1,8 @@
 package com.example.antey1988.petclinic.entities;
 
 import com.example.antey1988.petclinic.entities.base.NameEntity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -15,11 +17,14 @@ public class Pet extends NameEntity {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE, pattern = "yyyy-MM-dd")
     private Date birthDate;
     @ManyToOne
+    @JoinColumn(name = "owner_id")
+    @JsonBackReference
     private Owner owner;
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "type_id")
     private PetType petType;
-    @OneToMany(mappedBy = "pet")
+    @OneToMany(mappedBy = "pet", fetch = FetchType.EAGER)
     private Set<Visit> visits;
 
     public Date getBirthDate() {
@@ -69,17 +74,4 @@ public class Pet extends NameEntity {
         return visits.remove(visit);
     }
 
-    @Override
-    public String toString() {
-        StringBuilder allVisits = new StringBuilder("");
-        if (!getVisits().isEmpty()) {
-            allVisits.append(", Visits:");
-            visits.forEach(visit -> allVisits.append("\n\t").append(visit.toString()));
-        }
-        return super.toString() +
-                ", Birth Date=" + birthDate +
-                ", Owner: (" + owner + ")" +
-                ", Type: (" + petType + ")" +
-                allVisits;
-    }
 }

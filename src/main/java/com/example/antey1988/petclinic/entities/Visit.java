@@ -1,6 +1,7 @@
 package com.example.antey1988.petclinic.entities;
 
 import com.example.antey1988.petclinic.entities.base.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ public class Visit extends BaseEntity {
     @Column(name = "description")
     private String description;
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "pet_id")
     private Pet pet;
 
